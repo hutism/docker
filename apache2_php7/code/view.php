@@ -5,7 +5,7 @@ echo "<script>alert('Invalid access page');</script>";
 echo "<meta http-equiv='refresh' content='0; url=index.php'>";
 }
 $id = $_GET['id'];
-$con = mysqli_connect('localhost','nit','docker123!@#','sample');
+$con = mysqli_connect('mysql','root','toor','sample');
 $result = mysqli_query($con, "SELECT * FROM board WHERE id=".$id);
 if(mysqli_num_rows($result) == 0){
 echo "<script>alert('Invalid access page');</script>";
