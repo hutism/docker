@@ -64,7 +64,7 @@ echo "Welcome ".$_SESSION['username'];
 
 <?php
 
-$con = mysqli_connect('localhost','nit','docker123!@#','sample');
+$con = mysqli_connect('mysql','humanist','toor','sample');
 
 $result = mysqli_query($con, "SELECT * FROM board ORDER BY id DESC");
 
