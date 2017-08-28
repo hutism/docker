@@ -9,7 +9,7 @@ $date = date("Y-m-d");
 $file = NULL;
 if(is_uploaded_file($_FILES['upfile']['tmp_name']))
 $file = file_upload($_FILES['upfile']);
-$con = mysqli_connect('localhost','nit','docker123!@#','sample');
+$con = mysqli_connect('mysql','root','toor','sample');
 $result = mysqli_query($con, "INSERT INTO board (user,title,comment,file,date) VALUES
 ('$username','$title','$comment','$file','$date')");
 if(!$result)
