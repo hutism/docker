@@ -3,7 +3,7 @@ if(isset($_POST['login'])){
 $username = $_POST['username'];
 $password = $_POST['password'];
 $con = mysqli_connect('mysql','root','toor','sample');
-$result = mysqli_query($con, "SELECT*FROM users WHERE username='$username' AND
+$result = mysqli_query($con, "SELECT * FROM users WHERE username='$username' AND
 password='$password'");
 if(mysqli_num_rows($result) == 0)
 echo "<script>alert('Invalid username or password');</script>";
