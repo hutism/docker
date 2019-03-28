@@ -6,8 +6,8 @@ services:
     - ./config.inc.php:/var/www/html/config.inc.php
    ports:
     - "2345:80"
-   depends_on:
-    - mysql
+   links:
+    - mysql:mysql
  mysql:
    image: mysql:5.5
    environment: 
